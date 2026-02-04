@@ -1,0 +1,421 @@
+/* Base */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Comfortaa", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: #302e2a;
+  color: #f5f1ea;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Navbar */
+
+.site-header {
+  background-color: #26231f;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+}
+
+.navbar-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+}
+
+.brand-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #f5f1ea;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.nav-list a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 100%;
+  height: 3px;
+  background-color: #ff55eb;
+  border-radius: 999px;
+}
+
+/* Hero */
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.pretitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffb4f6;
+}
+
+.h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.intro-special {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-paragraph {
+  line-height: 1.5;
+  max-width: 34rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  background-color: #ff55eb;
+  color: #161513;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-photo {
+  width: 500px;
+  height: auto;
+  border-radius: 26px;
+  object-fit: contain;
+  box-shadow: none;
+
+  position: absolute;
+  top: -137px;
+  right: 0;
+}
+
+/* Profile card */
+
+.unified-card {
+  margin-top: 1rem;
+  background-color: #37342f;
+  border-radius: 18px;
+  padding: 1.4rem 1.6rem 1.6rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: #4a4642;
+}
+
+/* Page titles */
+
+.page-title {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+
+/* About page */
+
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.about-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 24px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Portfolio */
+
+.projects {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.project {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-banner {
+  margin-bottom: 2.5rem;
+}
+
+.project-thumb {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+
+.project-banner .project-thumb {
+  height: 230px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.project-grid .project-thumb {
+  height: 190px;
+}
+
+.p-head {
+  text-align: center;
+  margin-top: 0.7rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.p-body {
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.9;
+  margin-top: 0.4rem;
+}
+
+/* ===== Ratio thumb frames for special projects (FIXES your screenshot) ===== */
+
+.thumb-frame {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #2f2c27;
+  overflow: hidden;
+}
+
+/* image fills the frame */
+.thumb-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* change to contain if you want no crop */
+  display: block;
+}
+
+/* Ratios */
+.ratio-iphone16pm {
+  aspect-ratio: 1320 / 2868;
+}
+
+.ratio-1080x2400 {
+  aspect-ratio: 1080 / 2400;
+}
+
+.ratio-1920x1080 {
+  aspect-ratio: 1920 / 1080;
+}
+
+/* Certifications (portfolio page) */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background-color: #37342f;
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* keeps true 2000x1523 ratio */
+.cert-thumb {
+  width: 100%;
+  aspect-ratio: 2000 / 1523;
+  object-fit: contain;
+  display: block;
+  border-radius: 14px;
+  background-color: #2f2c27;
+}
+
+/* Project detail page */
+
+.project-detail-img {
+  max-width: 100%;
+  width: 640px;
+  max-height: 360px;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.project-desc {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.project-details {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding-left: 1.2rem;
+}
+
+/* Contact */
+
+.contact-form {
+  max-width: 650px;
+  margin: 2.5rem auto;
+  background-color: #37342f;
+  padding: 2rem 2.4rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: #4a4642;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  color: #f5f1ea;
+}
+
+.contact-form .submit {
+  border: none;
+  width: 180px;
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background-color: #ff55eb;
+  color: #161513;
+}
+
+/* Footer */
+
+.footer-logo {
+  text-align: center;
+  padding: 2rem 0 1.5rem;
+}
+
+.footer-logo img {
+  width: 110px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 800px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-row,
+  .about-row.reverse {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    width: 230px;
+    height: 230px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}

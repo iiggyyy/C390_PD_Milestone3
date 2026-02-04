@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IgNiteTech | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <%- include("partials/header") %>
+
+  <main class="container">
+    <h2 class="page-title">My Portfolio</h2>
+
+    <section class="projects">
+      <!-- Top banner project -->
+      <a href="/project/banner-design" class="project project-banner">
+        <div class="p-head">COMPANY BANNER DESIGN</div>
+        <img class="project-thumb" src="/images/company banner.png" alt="Company banner design">
+        <div class="p-body">
+          Marketing banners and promotional materials for social media.
+        </div>
+      </a>
+
+      <!-- Grid projects -->
+      <div class="project-grid">
+
+        <a href="/project/logo-design" class="project">
+          <div class="p-head">PERSONAL LOGO DESIGN</div>
+          <img class="project-thumb" src="/images/personal logo.png" alt="Personal logo design">
+          <div class="p-body">
+            Minimalist personal logo representing the IgNiteTech brand.
+          </div>
+        </a>
+
+        <a href="/project/escape-room" class="project">
+          <div class="p-head">ESCAPE ROOM</div>
+          <img class="project-thumb" src="/images/escape room.png" alt="Escape Room">
+          <div class="p-body">
+            A 3D escape room created in Unity focusing on puzzles and player flow.
+          </div>
+        </a>
+
+        <a href="/project/gpa-tracker" class="project">
+          <div class="p-head">GPA TRACKER APP</div>
+          <img class="project-thumb" src="/images/gpa tracker.jpg" alt="GPA Tracker">
+          <div class="p-body">
+            A web app that tracks GPA performance with interactive charts.
+          </div>
+        </a>
+
+        <a href="/project/movie-tracker" class="project">
+          <div class="p-head">MOVIE TRACKER APP</div>
+          <img class="project-thumb" src="/images/movie tracker.png" alt="Movie Tracker">
+          <div class="p-body">
+            A React-based app to manage movie watchlists and ratings.
+          </div>
+        </a>
+
+        <!-- FIGMA CA2 (iPhone 16 Pro Max ratio) -->
+        <a href="/project/figma-ca2" class="project">
+          <div class="p-head">FIGMA CA2</div>
+          <div class="thumb-frame ratio-iphone16pm">
+            <img src="/images/figma-ca2-1.png" alt="Figma CA2">
+          </div>
+          <div class="p-body">
+            Custom UI kit + high-fidelity screens with interactions.
+          </div>
+        </a>
+
+        <!-- FIGMA FA (iPhone 16 Pro Max ratio) -->
+        <a href="/project/figma-fa" class="project">
+          <div class="p-head">FIGMA FA</div>
+          <div class="thumb-frame ratio-iphone16pm">
+            <img src="/images/figma-fa-1.png" alt="Figma FA">
+          </div>
+          <div class="p-body">
+            Full UX process screens from lo-fi to hi-fi.
+          </div>
+        </a>
+
+        <!-- CALORIE COUNTER (1080x2400 ratio) -->
+        <a href="/project/calorie-counter" class="project">
+          <div class="p-head">CALORIE COUNTER</div>
+          <div class="thumb-frame ratio-1080x2400">
+            <img src="/images/calorie-counter-1.png" alt="Calorie Counter">
+          </div>
+          <div class="p-body">
+            Meal logging, tracking, and history screens.
+          </div>
+        </a>
+
+        <!-- STUDYSPRINT (1920x1080 ratio) -->
+        <a href="/project/studysprint" class="project">
+          <div class="p-head">STUDYSPRINT</div>
+          <div class="thumb-frame ratio-1920x1080">
+            <img src="/images/StudySprint1.png" alt="StudySprint">
+          </div>
+          <div class="p-body">
+            Study planner UI screens for tasks, sessions, and progress.
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <h2 class="page-title" style="margin-top:60px;">Certifications</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="p-head">CSS Certificate</div>
+        <img class="cert-thumb" src="/images/css-certificate.png" alt="CSS Certificate">
+      </div>
+
+      <div class="cert-card">
+        <div class="p-head">JavaScript (Basic)</div>
+        <img class="cert-thumb" src="/images/javascript-basic-certificate.png" alt="JavaScript Basic Certificate">
+      </div>
+
+      <div class="cert-card">
+        <div class="p-head">React (Basic)</div>
+        <img class="cert-thumb" src="/images/react-basic-certificate.png" alt="React Basic Certificate">
+      </div>
+    </div>
+
+  </main>
+
+  <%- include("partials/footer") %>
+</body>
+</html>

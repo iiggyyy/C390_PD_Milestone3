@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IgNiteTech | Project</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <%- include("partials/header") %>
+
+  <main class="container project-page">
+
+    <h2 class="page-title"><%= project.title %></h2>
+
+    <img class="project-detail-img" src="<%= project.image %>" alt="<%= project.title %>">
+
+    <p class="project-desc"><%= project.description %></p>
+
+    <% if (project.details && project.details.length > 0) { %>
+      <ul class="project-details">
+        <% project.details.forEach(function(item) { %>
+          <li><%= item %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+    <% 
+      var ratioClass = "ratio-default";
+      if (project.id === "figma-ca2" || project.id === "figma-fa") ratioClass = "ratio-iphone16pm";
+      if (project.id === "calorie-counter") ratioClass = "ratio-1080x2400";
+      if (project.id === "studysprint") ratioClass = "ratio-1920x1080";
+    %>
+
+    <% if (project.screens && project.screens.length > 0) { %>
+      <h2 class="page-title" style="margin-top: 3rem;">Screens</h2>
+
+      <% project.screens.forEach(function(screen, index) { %>
+        <div class="about-row <%= index % 2 === 1 ? 'reverse' : '' %>">
+          <img class="screen-photo <%= ratioClass %>" src="<%= screen.src %>" alt="">
+
+          <div class="about-text">
+            <p><%= screen.caption %></p>
+          </div>
+        </div>
+      <% }); %>
+    <% } %>
+
+  </main>
+
+  <%- include("partials/footer") %>
+</body>
+</html>
