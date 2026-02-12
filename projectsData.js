@@ -74,6 +74,7 @@ module.exports = [
     id: "figma-ca2",
     title: "Figma CA2 (UI Kit + Screens)",
     image: "/images/figma-ca2-1.png",
+    figmaLink: "https://www.figma.com/design/sluAZ7Jo1YSfHRS7WKqqRk/CA2?node-id=0-1&p=f&t=6djDf9K7zPETI3vK-0",
     description:
       "A CA2 Figma submission built around a fully custom UI kit applied to high-fidelity mobile screens. Focused on consistency, component reuse, and clear interaction states without using premade templates.",
     details: [
@@ -94,6 +95,7 @@ module.exports = [
     id: "figma-fa",
     title: "Figma FA (Full UX Process)",
     image: "/images/figma-fa-1.png",
+    figmaLink: "https://www.figma.com/design/zTxV33TS6hCAP9BEPtjZ5b/FA?node-id=12-4&p=f&t=2hc4aqOcXXfZcTIT-0",
     description:
       "A full UX process project showing how the design was planned and refined from early structure to high-fidelity screens. Focused on user flow clarity, screen consistency, and practical UI decisions.",
     details: [

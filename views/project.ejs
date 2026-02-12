@@ -20,6 +20,17 @@
 
     <p class="project-desc"><%= project.description %></p>
 
+    <% if (project.figmaLink) { %>
+      <p style="text-align:center; margin: 0 0 1.5rem;">
+        <a class="cta"
+           href="<%= project.figmaLink %>"
+           target="_blank"
+           rel="noopener noreferrer">
+          View in Figma
+        </a>
+      </p>
+    <% } %>
+
     <% if (project.details && project.details.length > 0) { %>
       <ul class="project-details">
         <% project.details.forEach(function(item) { %>
